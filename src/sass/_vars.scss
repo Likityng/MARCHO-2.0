@@ -41,3 +41,11 @@ $bg: #f6f6f6;
   border: 1px solid $accent;
   padding: 14px 27px;
 }
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

@@ -69,6 +69,7 @@ a {
     color: #727272;
     position: relative;
     padding-right: 40px;
+
     &::after {
       content: '';
       position: absolute;
@@ -84,6 +85,7 @@ a {
   &__item:last-child {
     color: $accent;
     padding-right: 0;
+
     &::after {
       display: none;
     }
@@ -93,6 +95,31 @@ a {
     color: inherit;
   }
 }
+
 .header--page-404 {
   background-color: $bg;
+}
+
+.star {
+display: flex;
+justify-content: center;
+flex-direction: row-reverse;
+
+  &__item {
+    color: $bg;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .2s;
+  }
+}
+.star__item:hover,
+.star__item:hover~.star__item {
+  color: $default;
+}
+.star[data-total-value="1"] .star__item:nth-child(n + 5),
+.star[data-total-value="2"] .star__item:nth-child(n + 4),
+.star[data-total-value="3"] .star__item:nth-child(n + 3),
+.star[data-total-value="4"] .star__item:nth-child(n + 2),
+.star[data-total-value="5"] .star__item:nth-child(n + 1) {
+  color: #ffc35b;
 }
